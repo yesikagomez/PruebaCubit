@@ -3,14 +3,11 @@ import MaterialTable from "material-table";
 import axios from 'axios';
 import {Modal, TextField, Button, Avatar} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
+import DetailsIcon from '@material-ui/icons/Details';
 
 const columns= [
-  {title: 'ID', field:'id'},
   { title: 'Nombre', field: 'first_name' },
   { title: 'Apellido', field: 'last_name' }
-
- /* { title: 'Email', field: 'email' },
-  { title: 'Foto', field: 'avatar' }*/
 ];
 const baseUrl="https://reqres.in/api/users?page=2";
 
@@ -100,6 +97,7 @@ function Lista() {
               onClick: (event,rowData) => seleccionarUsuario(rowData.id)
             }
           ]}
+          
           options={{
             actionsColumnIndex: -1,
           }}
@@ -108,6 +106,7 @@ function Lista() {
               actions: "Acciones"
             }
           }}
+          
         />
         <Modal
         open={modal}
