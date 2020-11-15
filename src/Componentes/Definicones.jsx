@@ -38,12 +38,11 @@ export default function ControlledAccordions() {
           id="panel1bh-header"
         >
           <Typography className={classes.heading}>¿Que permite la implementación de un interceptor?</Typography>
-          <Typography className={classes.secondaryHeading}>I am an accordion</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-            maximus est, id dignissim quam.
+            Para crear un interceptor, se tiene que generar un servicio usando el CLI de angular
+            (se puede generar el interceptor donde se quiera en base a la estructura del proyecto).
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -54,14 +53,11 @@ export default function ControlledAccordions() {
           id="panel2bh-header"
         >
           <Typography className={classes.heading}>¿Cuándo implementar un guard?</Typography>
-          <Typography className={classes.secondaryHeading}>
-            You are currently not an owner
-          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
-            diam eros in elit. Pellentesque convallis laoreet laoreet.
+            Es una funcionalidad de angular, que se puede implementar cuando se necesita proteger las rutas, 
+            ya que es una interfaz que oculta las rutas, que verifica si el usuario esta autorizado a ir a determinada ruta.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -71,15 +67,11 @@ export default function ControlledAccordions() {
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-          <Typography className={classes.heading}>Que es una prueba unitaria</Typography>
-          <Typography className={classes.secondaryHeading}>
-            Filtering has been entirely disabled for whole web server
-          </Typography>
+          <Typography className={classes.heading}>¿Qué es una prueba unitaria?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-            vitae egestas augue. Duis vel est augue.
+             Es la prueba realizada para verificar el funcionamiento de una unidad de código.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -89,62 +81,31 @@ export default function ControlledAccordions() {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-            <Typography className={classes.heading}>Que es una prueba de servicio</Typography>
-          <Typography className={classes.secondaryHeading}>
-            You are currently not an owner
-          </Typography>
+       <Typography className={classes.heading}>¿Qué es una prueba de componente?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
-            diam eros in elit. Pellentesque convallis laoreet laoreet.
+            Es una prueba que se realiza para verificar las funcionalidades y/o usabilidades de los componentes. 
+            Ejemplo puede ser cualquier elemento que tenga entrada y deba generar alguna salida.
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+      <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3bh-content"
-          id="panel3bh-header"
+          aria-controls="panel5bh-content"
+          id="panel5bh-header"
         >
-            <Typography className={classes.heading}>Que es una prueba de componente</Typography>
-          <Typography className={classes.secondaryHeading}>
-            You are currently not an owner
-          </Typography>
+        <Typography className={classes.heading}>¿Qué son los hooks?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
-            diam eros in elit. Pellentesque convallis laoreet laoreet.
+            Los hooks son una nueva forma de usar características propias de React como el estado o el ciclo de vida 
+            sin la necesidad de escribir una clase que es como se hacia hasta ahora.
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3bh-content"
-          id="panel3bh-header"
-        >
-            <Typography className={classes.heading}>Que son los hooks </Typography>
-          <Typography className={classes.secondaryHeading}>
-            You are currently not an owner
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
-            diam eros in elit. Pellentesque convallis laoreet laoreet.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3bh-content"
-          id="panel3bh-header"
-        >
-        </AccordionSummary>
-      </Accordion>
+    
     </div>
   );
 }

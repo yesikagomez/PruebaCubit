@@ -3,14 +3,13 @@ import MaterialTable from "material-table";
 import axios from 'axios';
 import {Modal, TextField, Button, Avatar} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
-import DetailsIcon from '@material-ui/icons/Details';
+import './../index.css';
 
 const columns= [
   { title: 'Nombre', field: 'first_name' },
   { title: 'Apellido', field: 'last_name' }
 ];
 const baseUrl="https://reqres.in/api/users?page=2";
-
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -58,7 +57,6 @@ function Lista() {
       console.log(error);
     })
   }
-  
   const abrirCerrarModal=()=>{
     setModal(!modal);
   }
@@ -69,7 +67,7 @@ function Lista() {
 
   const bodyMostar=(
     <div className={styles.modal}>
-      <Avatar  src={UsuarioSeleccionado.avatar} />
+      <Avatar  src={UsuarioSeleccionado.avatar}  className='imagen'/>
       <TextField className={styles.inputMaterial} label="Name" name="name" value={UsuarioSeleccionado&&UsuarioSeleccionado.first_name}/>
       <br />
       <TextField className={styles.inputMaterial} label="Apellido" name="apellido" value={UsuarioSeleccionado&&UsuarioSeleccionado.last_name}/>          
@@ -87,6 +85,7 @@ function Lista() {
   return (
     <div>
      <MaterialTable
+         backgroundColor='#212121'
           columns={columns}
           data={data}
           title="Lista Usuarios"  
@@ -106,11 +105,10 @@ function Lista() {
               actions: "Acciones"
             }
           }}
-          
         />
         <Modal
-        open={modal}
-        onClose={abrirCerrarModal}>
+           open={modal}
+           onClose={abrirCerrarModal}>
           {bodyMostar}
         </Modal>
     </div>
