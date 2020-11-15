@@ -67,7 +67,7 @@ function Lista() {
 
   const bodyMostar=(
     <div className={styles.modal}>
-      <Avatar  src={UsuarioSeleccionado.avatar}  className='imagen'/>
+      <Avatar src={UsuarioSeleccionado.avatar}  className='imagen'/>
       <TextField className={styles.inputMaterial} label="Name" name="name" value={UsuarioSeleccionado&&UsuarioSeleccionado.first_name}/>
       <br />
       <TextField className={styles.inputMaterial} label="Apellido" name="apellido" value={UsuarioSeleccionado&&UsuarioSeleccionado.last_name}/>          
